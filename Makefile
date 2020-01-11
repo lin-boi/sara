@@ -1,7 +1,8 @@
-CFLAGS= -Wall -g -I/usr/include/freetype2 -Wno-deprecated-declarations
-LIBS= -lX11 -lXft -lfontconfig
-LDFLAGS=
-
+include config.mk
+options:
+	@echo build options:
+	@echo "CFLAGS   = ${CFLAGS}"
+	@echo "LDFLAGS  = ${LDFLAGS}"
 SRC= sara.c
 OBJ= ${SRC:.c=.o}
 
